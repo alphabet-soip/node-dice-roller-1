@@ -4,6 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            text-align: center;
+            background-color: #495575;
+        }
+        .color_block {
+			background-color: #5089b6;
+			display: inline-block;
+			padding: 10px;
+			border-radius: 10px;
+			margin: 10px 0;
+		}
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #555;
+        }
+    </style>
     <script>
         function calculateBMI() {
 
@@ -17,20 +43,27 @@
                 document.getElementById('result').innerText = "Please enter valid values.";
             }
         }
+        function goBack() {
+            window.history.back();
+        }
     </script>
 </head>
 <body>
-    <h1>BMI Calculator</h1>
-    <form>
-        <label for="weight">Weight (kg): </label>
-        <input type="number" id="weight" name="weight" required>
-        <br><br>
-        <label for="height">Height (m): </label>
-        <input type="number" step="0.01" id="height" name="height" required>
-        <br><br>
-        <button type="button" onclick="calculateBMI()">Calculate BMI</button>
-    </form>
-    
-    <p id="result"></p>
+    <div class="color_block">
+        <h1>BMI Calculator</h1>
+        <form>
+            <label for="weight">Weight (kg): </label>
+            <input type="number" id="weight" name="weight" required>
+            <br><br>
+            <label for="height">Height (m): </label>
+            <input type="number" step="0.01" id="height" name="height" required>
+            <br><br>
+            <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+        </form>
+        
+        <p id="result"></p>
+
+        <button class="back-button" onclick="goBack()">back</button>
+    </div>
 </body>
 </html>
