@@ -6,8 +6,9 @@
     <title>Dice Roller</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
             text-align: center;
+            background-color: #495575;
         }
         .dice-container {
             margin: 20px;
@@ -25,24 +26,33 @@
             text-align: right;
             background-color: lightgray;
         }
+		.color_block {
+			background-color: #5089b6;
+			display: inline-block;
+			padding: 10px;
+			border-radius: 10px;
+			margin: 10px 0;
+		}
     </style>
 </head>
 <body onload="rollDice()">
-    <h1>Dice Roller</h1>
-	<h2>Production</h2>
-    <div class="dice-container">
-        <label for="dice1" class="dice-label">Dice:</label>
-        <input id="dice1" type="text" class="readonly-field" readonly><br><br>
+    <div class="color_block">
+        <h1>Dice Roller</h1>
+        <h2>Production</h2>
+        <div class="dice-container">
+            <label for="dice1" class="dice-label">Dice:</label>
+            <input id="dice1" type="text" class="readonly-field" readonly><br><br>
 
-        <button id="rollButton" autofocus onclick="rollDice()">Roll Dice</button>
+            <button id="rollButton" autofocus onclick="rollDice()">Roll Dice</button>
+        </div>
+
+        <footer>
+            <p>Press enter to roll dice.</p>
+            <p>If lost focus, click 'Roll Dice'.</p>
+            <p>Environment: Roller Production</p>
+            <p>Version: 1.01</p>
+        </footer>
     </div>
-
-    <footer>
-		<p>Press enter to roll dice.</p>
-		<p>If lost focus, click 'Roll Dice'.</p>
-        <p>Environment: Roller Production</p>
-        <p>Version: 1.01</p>
-    </footer>
 
     <script>
         function rollDice() {
