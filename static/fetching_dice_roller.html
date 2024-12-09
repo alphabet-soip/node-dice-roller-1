@@ -33,6 +33,18 @@
 			border-radius: 10px;
 			margin: 10px 0;
 		}
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body onload="rollDice()">
@@ -45,6 +57,8 @@
 
             <button id="rollButton" autofocus onclick="rollDice()">Roll Dice</button>
         </div>
+
+        <button class="back-button" onclick="goBack()">Back</button>
 
         <footer>
             <p>Press enter to roll dice.</p>
