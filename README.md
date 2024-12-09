@@ -1,3 +1,5 @@
-# Server Dice Roller with Node.js
+# Class Project
+# Programming Tools and Techniques
+Enrico Louis Taal
 # Credits
 Eric Pogue
